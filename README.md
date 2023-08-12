@@ -108,12 +108,12 @@ Finally when we checked back to client-1 we noticed that the ping succeeded.
 ### Create an Admin and Normal User Account in AD
 
 
-![image](https://github.com/jghis/configure-ad/assets/132087784/39ce6924-61fc-4936-9282-48662c057466)
+   ![image](https://github.com/jghis/configure-ad/assets/132087784/39ce6924-61fc-4936-9282-48662c057466)
 
     In DC-1 select   click on Tools and select Active Directory Users and computers.
     In Active Directory Users and Computers (ADUC)   we created an organizational Unit called "-EMPLOYEES" and another one named "-ADMINS"
     
-![image](https://github.com/jghis    /configure-ad/assets/132087784/db511f9d-b03f-46bf-9ccc-c41f76784dc0)
+![image](https://github.com/jghis/configure-ad/assets/132087784/db511f9d-b03f-46bf-9ccc-c41f76784dc0)
 
      We Created a new employee named "jane Doe"
 
