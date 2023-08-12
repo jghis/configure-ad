@@ -113,21 +113,21 @@ Finally when we checked back to client-1 we noticed that the ping succeeded.
     In DC-1 select   click on Tools and select Active Directory Users and computers.
     In Active Directory Users and Computers (ADUC)   we created an organizational Unit called "-EMPLOYEES" and another one named "-ADMINS"
     
-    ![image](https://github.com/jghis    /configure-ad/assets/132087784/db511f9d-b03f-46bf-9ccc-c41f76784dc0)
+![image](https://github.com/jghis    /configure-ad/assets/132087784/db511f9d-b03f-46bf-9ccc-c41f76784dc0)
 
      We Created a new employee named "jane Doe"
 
-     ![image](https://github.com/jghis/configure-ad/assets/132087784/54a99b6c-65e8-49f0-b229-cb8d4cb8c961)
+  ![image](https://github.com/jghis/configure-ad/assets/132087784/54a99b6c-65e8-49f0-b229-cb8d4cb8c961)
 
      We gave jane Doe  a password.
 
-    ![image](https://github.com/jghis/configure-ad/assets/132087784/2dcfb558-8a46-4763-a8c7-a8b18358feae)
+   ![image](https://github.com/jghis/configure-ad/assets/132087784/2dcfb558-8a46-4763-a8c7-a8b18358feae)
 
      
      we added  jane.doe to the "Domain Admins" Security Group.
 
 
-     ![image](https://github.com/jghis/configure-ad/assets/132087784/cb8ddb89-5657-4870-a75a-178c74327f91)
+   ![image](https://github.com/jghis/configure-ad/assets/132087784/cb8ddb89-5657-4870-a75a-178c74327f91)
 
     
      Close the Remote Desktop connection and log back in as "mydomain.com\jane.doe"
@@ -137,27 +137,27 @@ Finally when we checked back to client-1 we noticed that the ping succeeded.
    
     Remote desktop into client-1 as techuser
     
-    ![image](https://github.com/jghis/configure-ad/assets/132087784/c9f3b8c6-2bf3-44b4-b817-2d43bbb66041)
+   ![image](https://github.com/jghis/configure-ad/assets/132087784/c9f3b8c6-2bf3-44b4-b817-2d43bbb66041)
 
     Remote desktop into cient-1 as the original local admin(techuser) and join it to the Domain.
     Go to setting select rename this PC advanced click change and select Domain then type domain.com
     Computer will restart.
 
-    ![image](https://github.com/jghis/configure-ad/assets/132087784/2fcbf4b8-ab97-4e11-8ced-7b64df5ce978)
+   ![image](https://github.com/jghis/configure-ad/assets/132087784/2fcbf4b8-ab97-4e11-8ced-7b64df5ce978)
 
     From Azure portal select DC-1 go to networking  and copy DC-1 private IP address.
 
   
 
-    ![image](https://github.com/jghis/configure-ad/assets/132087784/ba957a99-083f-473e-9840-0811af79f778)
+   ![image](https://github.com/jghis/configure-ad/assets/132087784/ba957a99-083f-473e-9840-0811af79f778)
 
     From the Azure portal, set Client-1's DNS setting to the DC's private IP address.
     
-    ![image](https://github.com/jghis/configure-ad/assets/132087784/b5c8a2c9-a958-4c54-b6f8-cf236cd193a0)
+   ![image](https://github.com/jghis/configure-ad/assets/132087784/b5c8a2c9-a958-4c54-b6f8-cf236cd193a0)
 
      From the Azure portal, restart Client-1
     
-    ![image](https://github.com/jghis/configure-ad/assets/132087784/b85593e4-9d79-4b1f-a725-2ac094cc916d)
+   ![image](https://github.com/jghis/configure-ad/assets/132087784/b85593e4-9d79-4b1f-a725-2ac094cc916d)
 
      Joigning client-1 to the Domain Controler and log back into Client-1
     
@@ -166,7 +166,7 @@ Finally when we checked back to client-1 we noticed that the ping succeeded.
 
 ###  Setup Remote desktop for non-administrative Users on Client-1
    
-    ![image](https://github.com/jghis/configure-ad/assets/132087784/04057003-b41c-4e54-94bb-e1752d4d85fc)
+   ![image](https://github.com/jghis/configure-ad/assets/132087784/04057003-b41c-4e54-94bb-e1752d4d85fc)
 
     Log into Client-1 as mydomain.com\jane.doe and open system properties
     Click "Remote desktop"
@@ -181,23 +181,23 @@ Finally when we checked back to client-1 we noticed that the ping succeeded.
      Select new
      Select Users
      
-     ![image](https://github.com/jghis/configure-ad/assets/132087784/fcbda746-f623-46c8-96d1-c4aeddc71948)
+   ![image](https://github.com/jghis/configure-ad/assets/132087784/fcbda746-f623-46c8-96d1-c4aeddc71948)
      
-     ![image](https://github.com/jghis/configure-ad/assets/132087784/10bb2e86-521c-4af8-84ae-8dbbfdad879f)
+   ![image](https://github.com/jghis/configure-ad/assets/132087784/10bb2e86-521c-4af8-84ae-8dbbfdad879f)
 
       We created the user john Doe
      
-     ![image](https://github.com/jghis/configure-ad/assets/132087784/5ae66f17-e255-4ca5-99a5-8305cb368bbb)
+   ![image](https://github.com/jghis/configure-ad/assets/132087784/5ae66f17-e255-4ca5-99a5-8305cb368bbb)
 
-     ![image](https://github.com/jghis/configure-ad/assets/132087784/f79b3489-f1b6-469f-adb5-81a7556c9f85)
+   ![image](https://github.com/jghis/configure-ad/assets/132087784/f79b3489-f1b6-469f-adb5-81a7556c9f85)
 
      We created the user karen Doe
 
-     ![image](https://github.com/jghis/configure-ad/assets/132087784/817ca9bf-90ad-4ffe-ad1b-9e0818e1ed97)
+   ![image](https://github.com/jghis/configure-ad/assets/132087784/817ca9bf-90ad-4ffe-ad1b-9e0818e1ed97)
 
      We created the user ken Doe
 
-      ![image](https://github.com/jghis/configure-ad/assets/132087784/32b15847-2166-448c-991b-23806f7fbf8a)
+   ![image](https://github.com/jghis/configure-ad/assets/132087784/32b15847-2166-448c-991b-23806f7fbf8a)
 
       All users created.
 
