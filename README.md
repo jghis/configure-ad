@@ -1,5 +1,6 @@
 ### Setup Resources into Azure.
- Create the Domain Controller VM(Window Server 2022) named DC-1.
+
+1-Create the Domain Controller VM(Window Server 2022) named DC-1.
 
 ![image](https://github.com/jghis/configure-ad/assets/132087784/b5e822c2-727a-411e-9649-754fb7960b33)
 
@@ -11,12 +12,12 @@ Then we gave it a username and a password.
 
 ![image](https://github.com/jghis/configure-ad/assets/132087784/0d1a3220-dfd8-4686-9a73-7bf27ba651c4)
 
-On this picture we notice that the virtual machine is successfully deployed.
+ This picture shows that the virtual machine is successfully deployed.
 
 
-After creating the Domain Controller  set up the NIC(network interface card) private IP address from dynamic to static. This to avoid that the private IP address changes.
+After creating the Domain Controller we set up it's NIC(network interface card) private IP address from dynamic to static. This is to avoid that the private IP address changes.
 
-Select Networking then select Network configuration then IP configuration and  change the configuration from dynamic to static.
+ Click on Networking => select Network configuration => select IP configuration => then change the configuration from dynamic to static.
 
 ![image](https://github.com/jghis/configure-ad/assets/132087784/b6b0f704-e3e2-4254-af6b-02df2da080eb)
 
@@ -26,8 +27,9 @@ Select Networking then select Network configuration then IP configuration and  c
 
 On this picture we set up the Domain Controller  private IP address from dynamic to static to avoid it's private IP address to change.
 
-  create the Client virtual machine VM ( Window 10) named Client-1. Make sure we use the same Resource Group and Vnet that was created for DC-1.
-Make sure that both VMs are in the same Vnet(virtual network)
+ 2-create the Client virtual machine VM ( Window 10) named Client-1.
+  Make sure we use the same Resource Group and Vnet that was created for DC-1.
+  Make sure that both VMs are in the same Vnet(virtual network)
 
 ![image](https://github.com/jghis/configure-ad/assets/132087784/c1698ae5-154e-480d-ae94-7300b2a8045c)
 
@@ -39,19 +41,20 @@ Client-1 has the same Resource Group than the Domain Controller.
 
 ![image](https://github.com/jghis/configure-ad/assets/132087784/ca67367b-54c1-4b41-89ed-906471198f4b)
 
-On this picture we notice that Client-1 has the same virtual Network than the Domain Controller.
+On this picture we can notice that Client-1 has the same virtual Network than the Domain Controller.
 
 
-After all this is done we should ensure connectivity between client-1 and the Domain Controller.
-Ensure Connectivity between Client-1 and DC-1
-To do so loggin into Client-1 using  Microsoft Remote desktop connection and ping DC1's private IP address with Ping -t. 
+After all this is done we will ensure connectivity between client-1 and the Domain Controller.
+
+ 3-Ensure Connectivity between Client-1 and DC-1
+  To do so loggin into Client-1 using  Microsoft Remote desktop connection and ping DC1's private IP address with Ping -t. 
 
 ![image](https://github.com/jghis/configure-ad/assets/132087784/8601f0be-174f-4a19-8d49-ee37528f9acb)
 
-The ping will faill because DC-1 local windows Firewall will block the ICMPv4 traffic. 
+The ping faills because DC-1 local windows Firewall is blocking the ICMPv4 traffic. 
 
-To remedy to that Loggin to the Domain Controller and enable ICMPv4 trafic on the local windows Firewall.
-After enabling ICMPv4 check back to Client-1 to see the ping succeed.
+To remedy to that we loggin to the Domain Controller and enable ICMPv4 trafic on the local windows Firewall.
+After enabling ICMPv4 checked back to Client-1 to see the ping succeed.
 
 ![image](https://github.com/jghis/configure-ad/assets/132087784/1129610c-345c-40dc-a287-9187cd41a2e5)
 
@@ -79,7 +82,7 @@ Finally when we checked back to client-1 we noticed that the ping succeeded.
 
   ![image](https://github.com/jghis/configure-ad/assets/132087784/38467905-156f-4b05-8681-a39e08970bea)
 
-  We want Active Directory Doamain Services to be installed on DC-1
+  We want Active Directory Domain Services to be install on DC-1
 
   ![image](https://github.com/jghis/configure-ad/assets/132087784/9b804944-a985-421e-a253-dc44d8ac4c12)
 
@@ -110,10 +113,10 @@ Finally when we checked back to client-1 we noticed that the ping succeeded.
 
    ![image](https://github.com/jghis/configure-ad/assets/132087784/39ce6924-61fc-4936-9282-48662c057466)
 
-    In DC-1 select   click on Tools and select Active Directory Users and computers.
-    In Active Directory Users and Computers (ADUC)   we created an organizational Unit called "-EMPLOYEES" and another one named "-ADMINS"
+    In DC-1 click on Tools and select Active Directory Users and computers.
+    In Active Directory Users and Computers (ADUC) create an organizational Unit called "-EMPLOYEES" and another one named "-ADMINS"
     
-![image](https://github.com/jghis/configure-ad/assets/132087784/db511f9d-b03f-46bf-9ccc-c41f76784dc0)
+   ![image](https://github.com/jghis/configure-ad/assets/132087784/db511f9d-b03f-46bf-9ccc-c41f76784dc0)
 
      We Created a new employee named "jane Doe"
 
@@ -140,12 +143,12 @@ Finally when we checked back to client-1 we noticed that the ping succeeded.
    ![image](https://github.com/jghis/configure-ad/assets/132087784/c9f3b8c6-2bf3-44b4-b817-2d43bbb66041)
 
     Remote desktop into cient-1 as the original local admin(techuser) and join it to the Domain.
-    Go to setting select rename this PC advanced click change and select Domain then type domain.com
+    Go to setting => select rename this PC advanced => click change => select Domain then type domain.com
     Computer will restart.
 
    ![image](https://github.com/jghis/configure-ad/assets/132087784/2fcbf4b8-ab97-4e11-8ced-7b64df5ce978)
 
-    From Azure portal select DC-1 go to networking  and copy DC-1 private IP address.
+    From Azure portal select DC-1 => go to networking  and copy DC-1'1 private IP address.
 
   
 
@@ -159,9 +162,9 @@ Finally when we checked back to client-1 we noticed that the ping succeeded.
     
    ![image](https://github.com/jghis/configure-ad/assets/132087784/b85593e4-9d79-4b1f-a725-2ac094cc916d)
 
-     Joigning client-1 to the Domain Controler and log back into Client-1
+     Joign client-1 to the Domain Controler and log back into Client-1
     
-    Login to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers inside the "Computers" container 
+    Log in to the Domain Controller (Remote Desktop) and verify Client-1 shows up in Active Directory Users and Computers inside the "Computers" container 
     on the root of the Domain.
 
 ###  Setup Remote desktop for non-administrative Users on Client-1
@@ -185,17 +188,17 @@ Finally when we checked back to client-1 we noticed that the ping succeeded.
      
    ![image](https://github.com/jghis/configure-ad/assets/132087784/10bb2e86-521c-4af8-84ae-8dbbfdad879f)
 
-      We created the user john Doe
+      User john Doe created
      
    ![image](https://github.com/jghis/configure-ad/assets/132087784/5ae66f17-e255-4ca5-99a5-8305cb368bbb)
 
    ![image](https://github.com/jghis/configure-ad/assets/132087784/f79b3489-f1b6-469f-adb5-81a7556c9f85)
 
-     We created the user karen Doe
+      User karen Doe created
 
    ![image](https://github.com/jghis/configure-ad/assets/132087784/817ca9bf-90ad-4ffe-ad1b-9e0818e1ed97)
 
-     We created the user ken Doe
+     User ken Doe created
 
    ![image](https://github.com/jghis/configure-ad/assets/132087784/32b15847-2166-448c-991b-23806f7fbf8a)
 
