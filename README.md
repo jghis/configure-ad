@@ -1,22 +1,22 @@
 This tutorial outlines the prerequisites and installation of Active Directory on a Domain Controller.
 
   -Environments and technologies used:
-   Microsoft Azure(virtual Machines/compute)
-   Remote Desktop
-   Active Directory
+     Microsoft Azure(virtual Machines/compute)
+     Remote Desktop
+     Active Directory
 
   -Operating Systems used:
-   Windows 10
-   Window server 2022
+     Windows 10
+     Window server 2022
 
   -Deployment and configuration steps
-  . Set up Resources into Azure
-  . Install Active Directory
-  . Promote DC-1 to a Domain Controller
-  . Create an Admin and normal User account in Active Directory
-  . Join Client-1 to the Domain(mydomain.com)
-  . Set up remote desktop for non-administrrative Users on Client-1
-  . Create additional Users.
+    . Set up Resources into Azure
+    . Install Active Directory
+    . Promote DC-1 to a Domain Controller
+    . Create an Admin and normal User account in Active Directory
+    . Join Client-1 to the Domain(mydomain.com)
+    . Set up remote desktop for non-administrrative Users on Client-1
+    . Create additional Users.
 
 
 
