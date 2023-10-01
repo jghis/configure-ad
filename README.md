@@ -15,7 +15,7 @@ This tutorial outlines the prerequisites and installation of Active Directory on
     . Promote DC-1 to a Domain Controller
     . Create an Admin and normal User account in Active Directory
     . Join Client-1 to the Domain(mydomain.com)
-    . Set up remote desktop for non-administrrative Users on Client-1
+    . Set up remote desktop for non-administrative Users on Client-1
     . Create additional Users.
 
 
