@@ -10,13 +10,13 @@ This tutorial outlines the prerequisites and installation of Active Directory on
     - Window server 2022
 
   - Deployment and configuration steps
-    . Set up Resources into Azure
-    . Install Active Directory
-    . Promote DC-1 to a Domain Controller
-    . Create an Admin and normal User account in Active Directory
-    . Join Client-1 to the Domain(mydomain.com)
-    . Set up remote desktop for non-administrative Users on Client-1
-    . Create additional Users.
+    - Set up Resources into Azure
+    - Install Active Directory
+    - Promote DC-1 to a Domain Controller
+    - Create an Admin and normal User account in Active Directory
+    - Join Client-1 to the Domain(mydomain.com)
+    - Set up remote desktop for non-administrative Users on Client-1
+    - Create additional Users.
 
 
 
